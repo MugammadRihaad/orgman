@@ -1,5 +1,8 @@
 package ac.za.cput.adp3.xyzcongolmerate.factory.misc;
 
+import ac.za.cput.adp3.xyzcongolmerate.domain.org.Organisation;
+import ac.za.cput.adp3.xyzcongolmerate.factory.org.OrganisationFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,7 +12,10 @@ public class RoleFactoryTest {
 
     @Test
     public void buildRole() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Organisation role = OrganisationFactory.buildOrganisation("Sony");
+
+        Assert.assertNotNull(role.getOrgCode());
+        System.out.println("orgCode is: " + role.getOrgCode());
         /**
          * Your implementation goes here
          *
